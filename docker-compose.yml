@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  dockersqlapp:
+    image: ${DOCKER_REGISTRY-}dockersqlapp
+    build:
+      context: .
+      dockerfile: DockerSqlApp/Dockerfile
+    ports:
+      - 8000:8000
+    environment:
+      - SERVER_PORT=8000
+      - CONNECTIONSTRING=sqlserverdb://sqlserverdb:1450/Films
+    command: npm run debug
+    depends_on:
+      - sqlserverdb
+    volumes:
+      - ./:/app
+  sqlserverdb:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - SA_PASSWORD=2Secure*Password2
+      - ACCEPT_EULA=Y
+    ports:
+      - "1450:1433"
+    
+
