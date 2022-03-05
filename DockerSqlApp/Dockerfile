@@ -7,18 +7,18 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["DockerSqlApp.csproj", "DockerSqlApp/"]
-RUN dotnet restore "C:/Users/nikol/.jenkins/workspace/TestJob/DockerSqlApp/DockerSqlApp.csproj"
+COPY ["DockerSqlApp/DockerSqlApp.csproj", "DockerSqlApp/"]
+RUN dotnet restore "DockerSqlApp/DockerSqlApp.csproj"
 COPY . .
 WORKDIR "/src/DockerSqlApp"
-RUN dotnet build "C:/Users/nikol/.jenkins/workspace/TestJob/DockerSqlApp/DockerSqlApp.csproj" -c Release -o /app/build
+RUN dotnet build "DockerSqlApp.csproj" -c Release -o /app/build
 
 # Dev-ready container - actual files will be mounted in
 FROM base AS dev
 CMD ["mkdocs", "serve", "-a", "0.0.0.0:8000"]
 
 FROM build AS publish
-RUN dotnet publish "C:/Users/nikol/.jenkins/workspace/TestJob/DockerSqlApp/DockerSqlApp.csproj" -c Release -o /app/publish
+RUN dotnet publish "DockerSqlApp.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
