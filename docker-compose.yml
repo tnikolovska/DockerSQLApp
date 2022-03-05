@@ -5,7 +5,7 @@ services:
     image: ${DOCKER_REGISTRY-}dockersqlapp
     build:
       context: .
-      dockerfile: DockerSqlApp/Dockerfile
+      dockerfile: D:/DockerSqlApp/DockerSqlApp/Dockerfile
     ports:
       - 8000:8000
     environment:
@@ -22,6 +22,12 @@ services:
       - SA_PASSWORD=2Secure*Password2
       - ACCEPT_EULA=Y
     ports:
-      - "1450:1433"
+      - 1450:1433
+    volumes:
+      - sqldb:/data/db
+      - sqldb_config:/data/configdb
+volumes:
+  sqldb:
+  sqldb_config:
     
 

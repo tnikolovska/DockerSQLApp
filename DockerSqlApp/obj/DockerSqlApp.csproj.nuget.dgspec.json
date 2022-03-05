@@ -1,20 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nikol\\source\\repos\\DockerSqlApp\\DockerSqlApp\\DockerSqlApp.csproj": {}
+    "D:\\DockerSqlApp\\DockerSqlApp\\DockerSqlApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nikol\\source\\repos\\DockerSqlApp\\DockerSqlApp\\DockerSqlApp.csproj": {
+    "D:\\DockerSqlApp\\DockerSqlApp\\DockerSqlApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nikol\\source\\repos\\DockerSqlApp\\DockerSqlApp\\DockerSqlApp.csproj",
+        "projectUniqueName": "D:\\DockerSqlApp\\DockerSqlApp\\DockerSqlApp.csproj",
         "projectName": "DockerSqlApp",
-        "projectPath": "C:\\Users\\nikol\\source\\repos\\DockerSqlApp\\DockerSqlApp\\DockerSqlApp.csproj",
+        "projectPath": "D:\\DockerSqlApp\\DockerSqlApp\\DockerSqlApp.csproj",
         "packagesPath": "C:\\Users\\nikol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nikol\\source\\repos\\DockerSqlApp\\DockerSqlApp\\obj\\",
+        "outputPath": "D:\\DockerSqlApp\\DockerSqlApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\nikol\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -44,6 +45,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Testing": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.1, )"
@@ -91,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
