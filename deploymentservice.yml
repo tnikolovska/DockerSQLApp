@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: DockerSQLApp-deployment
   labels:
-    app: nginx
+    app: DockerSQLApp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: DockerSQLApp
   template:
     metadata:
       labels:
-        app: nginx
+        app: DockerSQLApp
     spec:
       containers:
-      - name: nginxServer
+      - name: DockerSQLAppServer
         image: 0d87-89-205-126-245.ngrok.io/dockersqlcontainer:1.0.1
         ports:
         - containerPort: 3000
@@ -25,10 +25,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-service
+  name: DockerSQLApp-service
 spec:
   selector:
-      app: nginx
+      app: DockerSQLApp
   type: LoadBalancer
   ports:
   - protocol: TCP
