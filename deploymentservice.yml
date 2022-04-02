@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: dockersqlappserver
-        image: 9968-89-205-126-233.ngrok.io/dockersqlcontainer:1.0.6
+        image: 70b9-89-205-126-245.ngrok.io/dockersqlcontainer:1.0.6
         ports:
         - containerPort: 3000
 
