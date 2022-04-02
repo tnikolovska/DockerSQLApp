@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dockersqlapp-deployment
+  namespace: kube-system
   labels:
     app: dockersqlapp
 spec:
