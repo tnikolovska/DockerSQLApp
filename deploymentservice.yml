@@ -19,7 +19,7 @@ spec:
       - name: dockersqlappserver
         image: ed0a-89-205-126-233.ngrok.io/dockersqlcontainer:1.1.5
         imagePullSecrets:
-        - name: regcred1
+        - name: regcred2
         ports:
         - containerPort: 3000
 
