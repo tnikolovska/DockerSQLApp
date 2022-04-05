@@ -14,7 +14,7 @@ node {
         def customImage = docker.build("243f-89-205-126-247.ngrok.io/dockersqlcontainer","-f DockerSqlApp/Dockerfile .")
 
         /* Push the container to the custom Registry */
-        customImage.push("1.1.12")
+        customImage.push("1.1.13")
         
         kubernetesDeploy(configs:"deploymentservice.yml",kubeconfigId:"kubernetes")
     }
