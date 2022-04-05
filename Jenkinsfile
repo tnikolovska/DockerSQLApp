@@ -4,7 +4,7 @@ node {
     def scannerHome = tool 'SonarScanner for MSBuild'
     withSonarQubeEnv() {
       bat "dotnet ${scannerHome}\\SonarScanner.MSBuild.dll begin /k:\"Sonar_test2\""
-      bat "dotnet build"
+      bat "dotnet build DockerSQLApp.sln"
       bat "dotnet ${scannerHome}\\SonarScanner.MSBuild.dll end"
     }
   }
