@@ -23,6 +23,6 @@ spec:
         imagePullSecrets:
         - name: regcred2
         ports:
-        - containerPort: 80
+        - containerPort: 8180
 
 
