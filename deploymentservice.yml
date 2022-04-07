@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: dockersqlappserver
-        image: aacf-89-205-126-245.ngrok.io/dockersqlcontainer:1.1.17
+        image: 5a35-89-205-126-233.ngrok.io/dockersqlcontainer:1.1.18
         imagePullSecrets:
         - name: regcred2
         ports:
